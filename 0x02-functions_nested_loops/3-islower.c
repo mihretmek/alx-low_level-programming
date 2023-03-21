@@ -2,6 +2,7 @@
 
 /**
  * _islower - checking if c is lower
+ * @c: comparing character
  * Return: 0 if false or 1 if true
  */
 
