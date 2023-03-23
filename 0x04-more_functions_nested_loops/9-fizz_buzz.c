@@ -8,27 +8,24 @@
 
 int main(void)
 {
-	int a;
+	int a = 1;
 
-	for (a = 1; a <= 100 ; a++)
+	while (a <= 100)
 	{
-		if (a % 15 == 0)
+		if (a % 3 == 0 && a % 5 == 0)
 		{
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		} else if (a % 3 == 0)
 		{
-			printf("Fizz");
+			printf("Fizz ");
 		} else if (a % 5 == 0)
 		{
-			printf("Buzz");
+			printf("Buzz ");
 		} else
 		{
-			printf("%d", a);
+			printf("%d ", a);
 		}
-	if (a != 0)
-	{
-		printf(" ");
-	}
+		a++;
 	}
 	printf("\n");
 	return (0);
