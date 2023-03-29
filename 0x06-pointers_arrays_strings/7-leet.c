@@ -17,8 +17,10 @@ char *leet(char *s)
 		for (m = 0; enc[m] != '\0'; m++)
 		{
 			if (s[n] == enc[m])
+			{
 				s[n] = enc[m + 1];
 				break;
+			}
 		}
 	}
 	return (s);
