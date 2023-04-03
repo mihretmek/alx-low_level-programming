@@ -15,9 +15,9 @@ char *_strchr(char *s, char c)
 	while (1)
 	{
 		i = *s++;
-		if (a == c)
+		if (i == c)
 			return (s - 1);
-		else if (a == 0)
+		else if (i == 0)
 			return (NULL);
 	}
 }
