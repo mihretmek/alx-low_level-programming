@@ -14,3 +14,5 @@ int is_prime_number(int n);
 
 int _putchar(char a);
 
+int _sqrt(int n, int i);
+
