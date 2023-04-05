@@ -16,3 +16,5 @@ int _putchar(char a);
 
 int _sqrt(int n, int i);
 
+int prime(int n, int i);
+
