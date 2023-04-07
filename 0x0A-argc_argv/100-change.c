@@ -11,9 +11,11 @@
 
 int main(int argc, char *argv[])
 {
-	int cents = 0;
-	int coin[] = {25, 10, 5, 2, 1};
+	int cents;
+	int coin;
 
+	cents = 0;
+	coin = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
