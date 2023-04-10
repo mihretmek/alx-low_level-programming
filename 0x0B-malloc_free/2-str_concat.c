@@ -14,6 +14,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, len1, len2;
 	char *c;
 
+	i = 0;
+	len1 = 0;
+	len2 = 0;
+
 	if (s1 == NULL)
 		return (NULL);
 	if (s2 == NULL)
@@ -23,6 +27,9 @@ char *str_concat(char *s1, char *s2)
 		i++;
 		len1++;
 	}
+
+	i = 0;
+
 	while (s2[i] != '\0')
 	{
 		i++;
