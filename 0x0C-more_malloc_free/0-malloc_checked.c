@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * malloc_checked - a function that allocates memory
