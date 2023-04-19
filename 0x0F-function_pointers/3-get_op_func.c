@@ -11,9 +11,7 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int i;
 
-	i = 0;
 
 	op_t ops[] = {
 		{"+", op_add},
@@ -24,6 +22,8 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
+	int i = 0;
+
 	while (ops[i].f != NULL)
 	{
 		if (*s == *(ops[i].op) && s[1] == '\0')
@@ -31,6 +31,5 @@ int (*get_op_func(char *s))(int, int)
 		i++;
 	}
 
-	printf("Error\n");
-	exit(99);
+	return (NULL);
 }
