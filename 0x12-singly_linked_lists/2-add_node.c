@@ -12,8 +12,9 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	int i = 0;
 	list_t *new_node;
+	int i = 0;
+
 
 	while (str[i])
 		i++;
