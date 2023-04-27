@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stddef.h>
 #include <stdlib.h>
 
 /**
@@ -8,8 +7,7 @@
  * Return: number of nodes
  * @h: head of node
  */
-
-size_t print_list(const char *h)
+size_t print_list(const list_t *h)
 {
 	size_t n = 0;
 
