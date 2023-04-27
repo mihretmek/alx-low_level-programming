@@ -10,10 +10,10 @@
  * @str: string
  */
 
-list_t add_node_end(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node,
-	list_t *last_node,
+	list_t *new_node;
+	list_t *last_node;
 	unsigned int i = 0;
 
 	while (str[i])
