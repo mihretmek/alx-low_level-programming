@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stddef.h>
-#include <Stdlib.h>
+#include <stdlib.h>
 
 /**
  * print_list - a function that prints all elements of list
