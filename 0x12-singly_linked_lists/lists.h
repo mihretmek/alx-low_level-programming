@@ -1,9 +1,12 @@
 #ifndef LISTS_H
 #define LISTS_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
+
+/**
+ * struct list_s - a sinly linked list
+ * @str: string
+ * @len: length of string
+ * @next: pointer to next node
+ */
 
 typedef struct list_s
 {
