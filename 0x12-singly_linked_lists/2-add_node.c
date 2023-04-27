@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * add_node - a function to add a new node at head
@@ -9,7 +10,7 @@
  * @str: string
  */
 
-list_t add_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	int i = 0;
 	list_t *new_node;
