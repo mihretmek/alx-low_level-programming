@@ -7,20 +7,6 @@
 #include <stddef.h>
 
 /**
- * struct list_s - a singly linked list
- * @str: string
- * @len: length of string
- * @next: pointer to next node
- */
-
-typedef struct list_s
-{
-	char *str;
-	unsigned int len;
-	struct list_s *next;
-} list_t;
-
-/**
  * struct listint_s - a singly linked list
  * @n: integer
  * @next: pointer to next node
