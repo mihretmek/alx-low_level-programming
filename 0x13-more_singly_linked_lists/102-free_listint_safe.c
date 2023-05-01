@@ -12,9 +12,9 @@ size_t free_listint_safe(listint_t **h)
 	int difference;
 	listint_t *tmp;
 
-	if (h != NULL || *h != NULL)
+	if (!h || !(*h))
 		return (0);
-	while (*h != NULL)
+	while (*h)
 	{
 		difference = *h - (*h)->next;
 		if (difference > 0)
