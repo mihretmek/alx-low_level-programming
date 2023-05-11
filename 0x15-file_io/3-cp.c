@@ -63,25 +63,24 @@ int main(int ac, char *av[])
 	f2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	re = read(f1, buffer, 1024);
 
-	if (f1 == -1 || re == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	if (f2 == -2)
-	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", av[2]);
-		exit(99);
-	}
-	while ((re = read(f1, buffer, 1024)) > 0)
-	{
+	do {
+		if (f1 == -1 || re == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", av[1]);
+			free(buffer);
+			exit(98);
+		}
 		wr = write(f2, buffer, re);
-		if (wr == -1)
+		if (f2 == -1 || wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: can't write to %s\n", av[2]);
+			free(buffer);
 			exit(99);
 		}
-	}
+		re = read(f1, buffer, 1024);
+		f2 = open(av[2], O_WRONLY | O_APPEND);
+	} while (re > 0);
+
 	free(buffer);
 	close_file(f1);
 	close_file(f2);
