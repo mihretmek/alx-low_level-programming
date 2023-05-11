@@ -8,7 +8,7 @@
  * @file: file for storing buffers
  */
 
-int *create_buffer(char *file)
+char *create_buffer(char *file)
 {
 	char *buffer;
 
@@ -50,7 +50,7 @@ void close_file(int fd)
 int main(int ac, char *av[])
 {
 	int f1, f2, wr, re;
-	char *buffer[1024];
+	char *buffer;
 
 	if (ac != 3)
 	{
